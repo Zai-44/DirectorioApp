@@ -4,12 +4,28 @@
 //Paso unoi: Función flecha
 //metodo then o dem viene con fetch(es un metodo o una función)
 const consumirApi = () => {
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then((response) => response.json())
-    //Los daros van a la consola
-    .then((data) => console.log(data))
-    //Descubrir que hacer en caso de error
-    .catch((error) => console.log(error));
+  //We use Promise.all to call both APIs at the same time
+  Promise.all([
+    fetch("https://jsonplaceholder.typicode.com/users").then((response) =>
+      response.json()
+    ),
+    fetch("https://jsonplaceholder.typicode.com/comments").then((response) =>
+      response.json()
+    ),
+  ])
+    //The data goes to the console
+    .then(([data1, data2]) => {
+      //Here we combine the answers as we wish
+      const resultadoCombinado = {
+        usuarios: data1,
+        publicaciones: data2,
+      };
+      console.log("Datos combinados", resultadoCombinado);
+    })
+    //Find out what to do in case of error
+    .catch((error) => {
+      console.log(error);
+    });
 };
 
 consumirApi();
