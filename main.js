@@ -14,7 +14,7 @@ const consumirApi = () => {
             <div class="text-center mb-3">
                 <img src="${avatarUrl}" alt="Avatar de ${personita.name}" class="rounded-circle avatar-img" />
               </div> 
-            <h5>class="text-info text-center"${personita.name}</h5>
+            <h5>${personita.name}</h5>
               <p><strong>Usuario:</strong> ${personita.username}</p>
               <p><strong>Email:</strong> ${personita.email}</p>
               <p><strong>Teléfono:</strong> ${personita.phone}</p>
