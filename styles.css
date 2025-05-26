@@ -3,7 +3,7 @@ body {
   color: white;
 }
 
-.user-card {
+.personita-card {
   background-color: #2a2a40;
   border-radius: 10px;
   padding: 20px;
@@ -11,13 +11,13 @@ body {
   color: white;
 }
 
-.user-card h5 {
-  color: #00bfff;
+.personita-card h5 {
+  color: #85e0ff;
 }
 .avatar-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 2px solid #00bfff;
+  border: 2px solid #fafafa;
   object-fit: cover;
 }
